@@ -1,6 +1,6 @@
 # System Specification Document
 
-## 2.2.1 Introduction
+## Introduction
 
 * **Project Title:** TailorFit: AI Job Application Assistant
 * **Domain:** Recruitment and Human Resources Technology. This domain covers digital platforms used to streamline hiring and assist job seekers in generating application materials.
