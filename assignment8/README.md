@@ -1,17 +1,4 @@
-# TailorFit: AI Job Application Assistant
-
-## Project Description
-TailorFit is an AI-assisted web application designed to help job seekers quickly tailor their cover letters to specific job descriptions. The system uses a lightweight HTML and JavaScript front-end and a Python API to process user input and interact with external AI models using a "Bring Your Own Key" architecture.
-
-## Assignment 4 Update
-This project now includes Assignment 4 stakeholder and system requirements documentation, built on top of the Assignment 3 TailorFit scope.
-
-* [System Specification Document](./SPECIFICATION.md)
-* [Architectural Diagrams](./ARCHITECTURE.md)
-* [System Requirements Document (SRD) & Stakeholder Analysis Table](update/SRD.md)
-* [Reflection](update/REFLECTION.md)
-
-# Assignment 8 Object State & Activity Workflow Modeling
+# Object State & Activity Workflow Modeling
 
 This directory contains the modeling of the dynamic behavior of tge TailorFit application using UML State Transition and Activity Workflow diagrams, along with a reflection on the process.
 
