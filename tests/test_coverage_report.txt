@@ -1,0 +1,15 @@
+======================================================== tests coverage ========================================================
+_______________________________________ coverage: platform win32, python 3.12.1-final-0 ________________________________________
+
+Name                                      Stmts   Miss  Cover   Missing
+-----------------------------------------------------------------------
+creational_patterns\__init__.py               0      0   100%
+creational_patterns\abstract_factory.py      22      0   100%
+creational_patterns\builder.py               19      0   100%
+creational_patterns\factory_method.py        11      0   100%
+creational_patterns\prototype.py             16      0   100%
+creational_patterns\simple_factory.py        16      0   100%
+creational_patterns\singleton.py             11      0   100%
+-----------------------------------------------------------------------
+TOTAL                                        95      0   100%
+====================================================== 7 passed in 1.26s =======================================================
