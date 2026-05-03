@@ -30,3 +30,21 @@ This directory contains the modeling of the dynamic behavior of tge TailorFit ap
   - A conceptual comparison detailing when to use State Diagrams versus Activity Diagrams in software design.
 
 Please refer to the individual markdown files above to view the Mermaid diagrams and read the full reflection.
+
+## Assignment 10: Class Implementation & Creational Patterns
+
+This update brings the UML Class diagrams to life by implementing the core classes and applying all six major creational design patterns in **Python**. Python was chosen due to its robust ecosystem for AI integration, testing (via `unittest` and `pytest-cov`), and clean object-oriented capabilities.
+
+### Design Decisions & Pattern Rationales
+- Simple Factory (`DocumentFactory`): Creates different document types (Resume vs. Cover Letter) in one place, based on a simple string input.
+- Factory Method (`LLMProcessor`): Provides a common interface for AI processing, letting subclasses like OpenAIProcessor or GeminiProcessor create the actual logic, so switching AI providers is easy.
+- Abstract Factory (`PromptFactory`): Creates groups of related objects (System and User Prompts) designed for specific tones (Professional vs. Creative) without using concrete classes.
+- Builder (`CoverLetterBuilder`): Avoids complex constructors for Cover Letters by building them step by step (adding contact info, body, and applying a tone).
+- Prototype (`PromptCache`): Saves and copies ready-made, complex AI Prompt templates to avoid costly re-initialization and formatting every time an API request is made.
+- Singleton (`DatabaseConnection`): Ensures only one shared, thread-safe instance exists for the backend database (or API credentials session), preventing multiple unnecessary connections.
+
+### Deliverables Overview
+- `/src`: Core class models derived from the Assignment 9 diagrams.
+- `/creational_patterns`: Implementation of all 6 design patterns applied to the TailorFit architecture.
+- `/tests`: Unit tests verifying correct object creation, initialization, and handling of edge cases (e.g., Singleton thread-safety).
+- `CHANGELOG.md`: Tracks the latest agile task movements and GitHub issue resolutions.
