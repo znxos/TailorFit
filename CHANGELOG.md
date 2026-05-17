@@ -42,3 +42,24 @@ All notable changes to this project will be documented in this file.
 - Design ensures easy addition of new backends (SQL, NoSQL, REST APIs) without affecting application services
 
 ---
+
+## Assignment 12
+
+### Updates
+- Service Layer (`/services`):
+  - `CoverLetterService`: Encapsulates business logic for managing cover letters, including a finalization workflow.
+  - `JobDescriptionService`: Handles business operations and validation for job descriptions.
+  - `ResumeService`: Handles business operations and validation for resumes.
+- REST API (`/api`):
+  - Implemented RESTful endpoints using FastAPI for Cover Letters, Job Descriptions, and Resumes.
+  - Added health and diagnostic endpoints (`/` and `/health`).
+- API Documentation (`/docs`):
+  - Generated OpenAPI/Swagger documentation (`openapi.json`).
+  - Documented request/response schemas, error handling (e.g., HTTPValidationError), and descriptions for all endpoints.
+- Unit and Integration Tests (`/tests`):
+  - `test_services.py`: Unit tests covering all business logic inside the service layer.
+  - `test_api.py`: Integration tests validating routing and API request/response flows.
+- GitHub Activity:
+  - Created and closed GitHub issues to track service and API development, linking commits to issues.
+- Hooked up the generic repositories to the new Service classes to perform functional data persistence.
+
