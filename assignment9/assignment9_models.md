@@ -94,7 +94,7 @@ classDiagram
     UserSession "1" ..> "1" AIGenerationService : requests
     AIGenerationService "1" ..> "1" CoverLetter : creates
     AIGenerationService "1" -- "1" SystemLog : writes
-
+```
 
 ### Key Design Decisions
 
