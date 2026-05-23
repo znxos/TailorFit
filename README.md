@@ -166,3 +166,22 @@ tests/test_api.py::TestResumeAPI::test_create_resume PASSED                     
 ```
 3. Documentation:
 OpenAPI/Swagger docs ( `/docs` )
+
+## Assignment 13: CI/CD Pipeline & Branch Protection
+
+### Running Tests Locally
+To run the tests locally, ensure you have the required dependencies installed:
+```bash
+# Install testing dependencies
+pip install pytest pytest-cov anyio httpx
+
+# Run all tests with verbosity
+pytest tests/ -v
+```
+
+### CI/CD Pipeline Overview
+This project uses **GitHub Actions** to automate continuous integration (CI) and continuous deployment (CD). 
+
+- **CI Workflow:** Every push to any branch and any Pull Request to `main` triggers the `ci.yml` workflow. This workflow sets up the Python 3.12 environment, installs dependencies, and runs the full `pytest` suite. If any tests fail, the workflow fails, which safely blocks the Pull Request from being merged.
+- **CD Workflow (Release Artifact):** When code is merged directly into the `main` branch, the pipeline automatically proceeds to the `build-and-release` job after successful testing. This job uses Python's `build` module to package the application into a standard wheel/sdist artifact and uploads it as a GitHub release artifact for easy deployment.
+- **Branch Protection:** The `main` branch is protected by strict repository rules. Direct pushes are disabled, requiring all changes to be submitted via Pull Requests. Furthermore, PRs require at least one approving review and all CI status checks (tests) to pass before a merge is permitted, ensuring top-tier code quality.
