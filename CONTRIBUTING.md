@@ -6,7 +6,6 @@ First off, thank you for considering contributing to TailorFit! It's people like
 
 ### Prerequisites
 - Python 3.12+
-- A valid API Key from a supported AI provider (e.g., OpenAI, Gemini)
 
 ### Installation
 1. **Fork** this repository to your own GitHub account.
