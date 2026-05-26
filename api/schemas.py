@@ -1,5 +1,6 @@
 from pydantic import BaseModel, Field
 from typing import Optional
+from datetime import datetime
 
 class CoverLetterCreate(BaseModel):
     content: str = Field(..., min_length=1, description="Cover letter content")
@@ -34,3 +35,10 @@ class ResumeUpdate(BaseModel):
 class ResumeResponse(BaseModel):
     id: str
     text: str
+
+class SystemLogResponse(BaseModel):
+    id: str
+    timestamp: datetime = Field(default_factory=datetime.now)
+    status: int
+    latency: float
+    error_type: Optional[str] = None
