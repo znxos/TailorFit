@@ -27,10 +27,10 @@ class JobDescriptionResponse(BaseModel):
     text: str
 
 class ResumeCreate(BaseModel):
-    text: str = Field(..., min_length=1, description="Resume content")
+    text: str = Field(..., min_length=1, max_length=6000, description="Resume content")
 
 class ResumeUpdate(BaseModel):
-    text: str = Field(..., min_length=1, description="Updated resume content")
+    text: str = Field(..., min_length=1, max_length=6000, description="Updated resume content")
 
 class ResumeResponse(BaseModel):
     id: str
