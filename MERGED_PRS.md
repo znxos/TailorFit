@@ -63,5 +63,5 @@ pytest -q tests/api passes
 
 Name Stmts Miss Cover Missing
 tests\api\test_api_workflow.py 134 0 100%
-    
-*(Note: Screenshots of CI passing for each PR were attached directly in the GitHub PR conversation threads).*
+
+![Screenshot 3](assignment15/chrome_TPJWVdwfjt.jpg)
