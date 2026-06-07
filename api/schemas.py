@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from typing import Optional
+from typing import Optional, Literal
 from datetime import datetime
 
 # ---------------------------------------------------------------------------
@@ -35,7 +35,7 @@ class APIKeyResponse(BaseModel):
     
 class CoverLetterCreate(BaseModel):
     content: str = Field(..., min_length=1, description="Cover letter content")
-    status: str = Field(default="draft", description="Status: draft or finalized")
+    status: Literal["draft", "finalized"] = Field(default="draft", description="Status: draft or finalized")
     template_version: str = Field(default="1.0", description="Template version")
 
 class CoverLetterUpdate(BaseModel):
@@ -44,7 +44,7 @@ class CoverLetterUpdate(BaseModel):
 class CoverLetterResponse(BaseModel):
     id: str
     content: str
-    status: str
+    status: Literal["draft", "finalized"]
     template_version: str
 
 class JobDescriptionCreate(BaseModel):
