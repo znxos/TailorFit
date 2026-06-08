@@ -48,11 +48,10 @@ class CoverLetterResponse(BaseModel):
     template_version: str
 
 class JobDescriptionCreate(BaseModel):
-    text: str = Field(..., min_length=1, description="Job description text")
+    text: str = Field(..., min_length=1, max_length=6000, description="Job description text")
 
 class JobDescriptionUpdate(BaseModel):
-    text: str = Field(..., min_length=1, description="Updated job description")
-
+    text: str = Field(..., min_length=1, max_length=6000, description="Updated job description")
 class JobDescriptionResponse(BaseModel):
     id: str
     text: str
