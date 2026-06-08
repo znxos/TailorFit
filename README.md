@@ -37,7 +37,7 @@ This project now includes Assignment 4 stakeholder and system requirements docum
 
 ## Assignment 8 Object State & Activity Workflow Modeling
 
-This directory contains the modeling of the dynamic behavior of tge TailorFit application using UML State Transition and Activity Workflow diagrams, along with a reflection on the process.
+This directory contains the modeling of the dynamic behavior of the TailorFit application using UML State Transition and Activity Workflow diagrams, along with a reflection on the process.
 
 ## Documentation Files
 
