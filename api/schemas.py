@@ -52,6 +52,7 @@ class JobDescriptionCreate(BaseModel):
 
 class JobDescriptionUpdate(BaseModel):
     text: str = Field(..., min_length=1, max_length=6000, description="Updated job description")
+
 class JobDescriptionResponse(BaseModel):
     id: str
     text: str
